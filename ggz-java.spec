@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	javadoc		# don't build javadoc
 #
-%include	/usr/lib/rpm/macros.java
 Summary:	Java core client for the GGZ Gaming Zone
 Summary(pl.UTF-8):	Klient GGZ Gaming Zone w Javie
 Name:		ggz-java
