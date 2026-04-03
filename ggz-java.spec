@@ -6,7 +6,7 @@ Summary:	Java core client for the GGZ Gaming Zone
 Summary(pl.UTF-8):	Klient GGZ Gaming Zone w Javie
 Name:		ggz-java
 Version:	0.0.14.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Applications/Games
 Source0:	http://mirrors.dotsrc.org/ggzgamingzone/ggz/%{version}/%{name}-%{version}.tar.gz
