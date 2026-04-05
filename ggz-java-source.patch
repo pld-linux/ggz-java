@@ -1,0 +1,11 @@
+--- ggz-java-0.0.14.1/build.xml.orig	2026-04-05 04:08:49.384385877 +0200
++++ ggz-java-0.0.14.1/build.xml	2026-04-05 04:08:55.979447680 +0200
+@@ -81,7 +81,7 @@
+ 	</target>
+ 
+ 	<target name="compile" depends="init" description="Compile the java code from ${src} into ${bin}">
+-		<javac srcdir="${src}" destdir="${bin}" deprecation="true" debug="false" optimize="true" source="1.4">
++		<javac srcdir="${src}" destdir="${bin}" deprecation="true" debug="false" optimize="true" >
+ 		</javac>
+ 		<copy todir="${bin}">
+ 			<fileset refid="project.resources" />

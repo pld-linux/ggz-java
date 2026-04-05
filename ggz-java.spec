@@ -2,21 +2,24 @@
 # Conditional build:
 %bcond_without	javadoc		# don't build javadoc
 #
+%{?use_default_jdk:%use_default_jdk 8}
+
 Summary:	Java core client for the GGZ Gaming Zone
 Summary(pl.UTF-8):	Klient GGZ Gaming Zone w Javie
 Name:		ggz-java
 Version:	0.0.14.1
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		Applications/Games
 Source0:	http://mirrors.dotsrc.org/ggzgamingzone/ggz/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	df1c433df4d310cb9ee90a7091bf2cf1
 URL:		http://www.ggzgamingzone.org/
+Patch0:		ggz-java-source.patch
 BuildRequires:	ant
-BuildRequires:	jdk >= 1.4
+%buildrequires_jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.556
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,6 +51,7 @@ Dokumentacja API klienta GGZ w Javie.
 
 %prep
 %setup -q
+%patch -P0 -p1
 
 %build
 export JAVA_HOME="%{java_home}"
